@@ -9,7 +9,6 @@ private const val PREFERENCE_NAME = "prefs_name"
 private const val SHARED_PREFS_KEY = "prefs_key"
 
 class Repository {
-    private lateinit var prefs: SharedPreferences
 
     fun getText(context: Context): String {
         return when {
@@ -47,5 +46,6 @@ class Repository {
 
     companion object {
         var localValue: String? = ""
+        private lateinit var prefs: SharedPreferences
     }
 }
